@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { PaymentRegistryDto } from "./dto";
-import { PrismaService } from "@prisma/prisma.service";
-import { Status } from "@repo/database";
+import { PrismaService } from "src/prisma/prisma.service";
+import { Status } from "@prisma/client";
 
 @Injectable()
 export class RegistryService {
