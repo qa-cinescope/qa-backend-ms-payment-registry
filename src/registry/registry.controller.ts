@@ -8,7 +8,7 @@ export class RegistryController {
   constructor(private readonly registryService: RegistryService) {}
 
   @MessagePattern("register.payment")
-  async registryPayment(@Payload() dto: PaymentRegistryDto) {
-    return await this.registryService.registryPayment(dto);
+  async registerPayment(@Payload() dto: PaymentRegistryDto) {
+    return await this.registryService.registerPayment(dto);
   }
 }
