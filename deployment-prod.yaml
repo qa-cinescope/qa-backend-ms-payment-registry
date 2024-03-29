@@ -20,6 +20,13 @@ spec:
       containers:
         - name: backend-ms-payment-registry
           image: zebolhd/qa-backend-ms-payment-registry:latest
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "150m"
+            limits:
+              memory: "150Mi"
+              cpu: "350m"
           imagePullPolicy: Always
           envFrom:
             - configMapRef:
